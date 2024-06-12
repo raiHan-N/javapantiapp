@@ -53,28 +53,24 @@ protected void kosong() {
 
 
 protected void datatable() {
-    Object[] Baris = {"ID","ID Wali","Nama Wali", "Alamat Wali", "ID Anak", "Nama Anak", "Jenis Kelamin Anak", "Usia", "Tanggal Lahir Anak", "Tanggal Adopsi"};
+    Object[] Baris = {"ID","Tanggal Donasi","Jenis Donasi", "Jumlah Donasi"};
     tabmode = new DefaultTableModel(null,Baris);
-    String sql= "select * from adopsi";
+    tabledonasi.setModel(tabmode);
+    String sql= "select * from donasi";
     try {
         Statement stat = conn.createStatement();
         ResultSet hasil = stat.executeQuery(sql);
         while(hasil.next()){
             String a = hasil.getString("id");
-            String b = hasil.getString("id_wali");        
-            String c = hasil.getString("nama_wali");        
-            String d = hasil.getString("alamat_wali");        
-            String e = hasil.getString("id_anak");        
-            String f = hasil.getString("nama_anak");        
-            String g = hasil.getString("jenkel_anak");        
-            String h = hasil.getString("usia");        
-            String i = hasil.getString("tgl_lahir");        
-            String j = hasil.getString("tgl_adopsi");        
+            String b = hasil.getString("tanggal_donasi");        
+            String c = hasil.getString("jenis_donasi");        
+            String d = hasil.getString("jumlah_donasi");        
+                  
             
-            String[] data = {a,b,c,d,e,f,g,h,i,j};
+            String[] data = {a,b,c,d};
             tabmode.addRow(data);
 
-        }
+        } 
     } catch (SQLException e) {
                     System.err.println(e);
 
