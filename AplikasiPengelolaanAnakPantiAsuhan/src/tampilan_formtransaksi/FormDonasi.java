@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 public class FormDonasi extends javax.swing.JFrame {
      private Connection conn = new koneksi().connect();
     private DefaultTableModel tabmode;
-    public String tgl,tgl2;
+    public String tgl;
     SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
     /**
@@ -53,31 +53,43 @@ protected void kosong() {
 
 
 protected void datatable() {
-    Object[] Baris = {"ID","ID Wali","Nama Wali", "Alamat Wali", "ID Anak", "Nama Anak", "Jenis Kelamin Anak", "Usia", "Tanggal Lahir Anak", "Tanggal Adopsi"};
+    Object[] Baris = {"ID Donasi","ID Donatur","Nama Donatur", "Tanggal Donasi", "Jenis Donasi", "Jumlah Donasi"};
     tabmode = new DefaultTableModel(null,Baris);
-    String sql= "select * from adopsi";
+    tabledonasi.setModel(tabmode);
+    String sql= "select * from donasi";
     try {
         Statement stat = conn.createStatement();
         ResultSet hasil = stat.executeQuery(sql);
         while(hasil.next()){
             String a = hasil.getString("id");
-            String b = hasil.getString("id_wali");        
-            String c = hasil.getString("nama_wali");        
-            String d = hasil.getString("alamat_wali");        
-            String e = hasil.getString("id_anak");        
-            String f = hasil.getString("nama_anak");        
-            String g = hasil.getString("jenkel_anak");        
-            String h = hasil.getString("usia");        
-            String i = hasil.getString("tgl_lahir");        
-            String j = hasil.getString("tgl_adopsi");        
+            String b = hasil.getString("iddnt");        
+            String c = hasil.getString("namad");        
+            String d = hasil.getString("tanggal_donasi");        
+            String e = hasil.getString("jenis_donasi");        
+            String f = hasil.getString("jumlah_donasi");        
+           
             
-            String[] data = {a,b,c,d,e,f,g,h,i,j};
+            String[] data = {a,b,c,d,e,f};
             tabmode.addRow(data);
 
         }
     } catch (SQLException e) {
                     System.err.println(e);
 
+    }
+}
+
+public void tanggal_donatur() {
+
+    try {
+        Connection c = new koneksi().connect();
+        Statement stat = c.createStatement();
+        String sql = "select * from donasi where id = '"+tid.getText()+"'";
+        ResultSet r = stat.executeQuery(sql);
+        while(r.next()){
+            tgldns.setDate(r.getDate("tanggal_donasi"));
+        }
+    } catch (SQLException e) {
     }
 }
 
@@ -122,6 +134,11 @@ protected void datatable() {
         jLabel1.setText("DATA DONASI");
 
         bsave.setText("SAVE");
+        bsave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bsaveActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("ID Donasi");
 
@@ -155,6 +172,12 @@ protected void datatable() {
         jdo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jdoActionPerformed(evt);
+            }
+        });
+
+        tgldns.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                tgldnsPropertyChange(evt);
             }
         });
 
@@ -268,7 +291,36 @@ protected void datatable() {
 
     private void bcariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcariActionPerformed
         // TODO add your handling code here:
+         String sql = "select * from donatur where id like '%"+tido.getText()+"%'";
+        try {
+            java.sql.Statement stat = conn.createStatement();
+            ResultSet hasil = stat.executeQuery(sql);
+            while(hasil.next()){
+                String id = hasil.getString("iddnt");
+                String nm = hasil.getString("namad");
+               
+                tido.setText(id);
+                tndo.setText(nm);
+                tndo.setEnabled(false);
+               
+            }
+        } catch (SQLException e) {
+                System.err.println(e);
+        }
     }//GEN-LAST:event_bcariActionPerformed
+
+    private void bsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bsaveActionPerformed
+        // TODO add your handling code here:
+                  
+        
+    }//GEN-LAST:event_bsaveActionPerformed
+
+    private void tgldnsPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_tgldnsPropertyChange
+        // TODO add your handling code here:
+         if(tgldns.getDate()!= null){
+            tgl = format.format(tgldns.getDate());
+        }
+    }//GEN-LAST:event_tgldnsPropertyChange
 
     /**
      * @param args the command line arguments
