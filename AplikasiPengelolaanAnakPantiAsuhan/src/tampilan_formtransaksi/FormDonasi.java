@@ -55,7 +55,6 @@ protected void kosong() {
 protected void datatable() {
     Object[] Baris = {"ID","ID Wali","Nama Wali", "Alamat Wali", "ID Anak", "Nama Anak", "Jenis Kelamin Anak", "Usia", "Tanggal Lahir Anak", "Tanggal Adopsi"};
     tabmode = new DefaultTableModel(null,Baris);
-    tabadop.setModel(tabmode);
     String sql= "select * from adopsi";
     try {
         Statement stat = conn.createStatement();
