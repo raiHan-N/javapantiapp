@@ -147,7 +147,7 @@
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="tusername" max="32767" attributes="0"/>
                       <Component id="cbjenis" alignment="0" max="32767" attributes="0"/>
-                      <Component id="tpassword" alignment="0" max="32767" attributes="0"/>
+                      <Component id="tpass" alignment="0" max="32767" attributes="0"/>
                       <Component id="tnama" max="32767" attributes="0"/>
                       <Component id="tid" min="-2" pref="266" max="-2" attributes="0"/>
                   </Group>
@@ -194,7 +194,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tpassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tpass" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -348,7 +348,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JPasswordField" name="tpassword">
+        <Component class="javax.swing.JPasswordField" name="tpass">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Poppins" size="12" style="0"/>
@@ -358,7 +358,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tpasswordActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tpassActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JPanel" name="btnsave">

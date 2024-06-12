@@ -42,19 +42,19 @@ public class Beranda extends javax.swing.JFrame {
         bdonasi = new rojerusan.RSMaterialButtonRectangle();
         bmasukan = new rojerusan.RSMaterialButtonRectangle();
         bdonatur1 = new rojerusan.RSMaterialButtonRectangle();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(16, 150, 72));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(247, 240, 240));
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Poppins ExtraBold", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(247, 240, 240));
         jLabel1.setText("Panti App");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, -1));
 
         btnback.setBackground(new java.awt.Color(24, 169, 153));
         btnback.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -84,89 +84,148 @@ public class Beranda extends javax.swing.JFrame {
         btnback.setLayout(btnbackLayout);
         btnbackLayout.setHorizontalGroup(
             btnbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-            .addGroup(btnbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(btnbackLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel5)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(btnbackLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         btnbackLayout.setVerticalGroup(
             btnbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 35, Short.MAX_VALUE)
-            .addGroup(btnbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(btnbackLayout.createSequentialGroup()
-                    .addGap(0, 11, Short.MAX_VALUE)
-                    .addComponent(jLabel5)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(btnbackLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        jPanel1.add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 50, -1));
 
         bortuadopsi.setBackground(new java.awt.Color(24, 169, 153));
         bortuadopsi.setText("FORM ORTU ADOPSI");
+        bortuadopsi.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         bortuadopsi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bortuadopsiActionPerformed(evt);
             }
         });
-        jPanel1.add(bortuadopsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 220, 50));
 
         banak.setBackground(new java.awt.Color(24, 169, 153));
         banak.setText("Form  Anak Asuh");
+        banak.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         banak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 banakActionPerformed(evt);
             }
         });
-        jPanel1.add(banak, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 220, 50));
 
         bpengeluaran.setBackground(new java.awt.Color(24, 169, 153));
         bpengeluaran.setText("FORM PENGELUARAN");
+        bpengeluaran.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         bpengeluaran.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bpengeluaranActionPerformed(evt);
             }
         });
-        jPanel1.add(bpengeluaran, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 220, 50));
 
         badopsi.setBackground(new java.awt.Color(24, 169, 153));
         badopsi.setText("FORM ADOPSI");
+        badopsi.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         badopsi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 badopsiActionPerformed(evt);
             }
         });
-        jPanel1.add(badopsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 220, 50));
 
         bdonasi.setBackground(new java.awt.Color(24, 169, 153));
         bdonasi.setText("FORM DONASI");
+        bdonasi.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         bdonasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bdonasiActionPerformed(evt);
             }
         });
-        jPanel1.add(bdonasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 220, 50));
 
         bmasukan.setBackground(new java.awt.Color(24, 169, 153));
         bmasukan.setText("FORM PEMASUKAN");
+        bmasukan.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         bmasukan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bmasukanActionPerformed(evt);
             }
         });
-        jPanel1.add(bmasukan, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 220, 50));
 
         bdonatur1.setBackground(new java.awt.Color(24, 169, 153));
         bdonatur1.setText("FORM DONATUR");
+        bdonatur1.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         bdonatur1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bdonatur1ActionPerformed(evt);
             }
         });
-        jPanel1.add(bdonatur1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 220, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 480));
+        jLabel2.setFont(new java.awt.Font("Poppins SemiBold", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(247, 240, 240));
+        jLabel2.setText("FORM TRANSAKSI");
+
+        jLabel3.setFont(new java.awt.Font("Poppins SemiBold", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(247, 240, 240));
+        jLabel3.setText("FORM INPUT");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(bortuadopsi, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)
+                            .addComponent(banak, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bdonatur1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(40, 40, 40)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(jLabel2)
+                            .addComponent(badopsi, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bdonasi, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bmasukan, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bpengeluaran, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(160, 160, 160)
+                        .addComponent(jLabel1)))
+                .addContainerGap(150, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bortuadopsi, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(badopsi, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(banak, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bdonasi, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bdonatur1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bmasukan, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addComponent(bpengeluaran, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jLabel2.getAccessibleContext().setAccessibleName("");
+        jLabel3.getAccessibleContext().setAccessibleName("");
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -195,7 +254,7 @@ public class Beranda extends javax.swing.JFrame {
 
     private void bortuadopsiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bortuadopsiActionPerformed
         // TODO add your handling code here:
-          this.hide();        
+         this.hide();        
         new FormOrtuAdopsi().setVisible(true);
     }//GEN-LAST:event_bortuadopsiActionPerformed
 
@@ -278,6 +337,8 @@ public class Beranda extends javax.swing.JFrame {
     private rojerusan.RSMaterialButtonRectangle bpengeluaran;
     private javax.swing.JPanel btnback;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

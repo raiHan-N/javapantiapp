@@ -38,12 +38,12 @@ public class FormLogin extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         tusername = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        bregister = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         bcancel = new rojerusan.RSMaterialButtonRectangle();
         blogin = new rojerusan.RSMaterialButtonRectangle();
         tpass = new rojerusan.RSPasswordTextPlaceHolder();
+        bregister = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
 
@@ -64,18 +64,6 @@ public class FormLogin extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 51, 51));
         jLabel4.setText("Belum ada akun ? silahkan ");
-
-        bregister.setFont(new java.awt.Font("Poppins Light", 1, 14)); // NOI18N
-        bregister.setText("Register");
-        bregister.setBorder(null);
-        bregister.setBorderPainted(false);
-        bregister.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bregister.setIconTextGap(10);
-        bregister.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bregisterActionPerformed(evt);
-            }
-        });
 
         jLabel3.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jLabel3.setText("Password");
@@ -109,6 +97,15 @@ public class FormLogin extends javax.swing.JFrame {
             }
         });
 
+        bregister.setFont(new java.awt.Font("Poppins SemiBold", 0, 14)); // NOI18N
+        bregister.setText("Register");
+        bregister.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bregister.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bregisterMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -116,11 +113,6 @@ public class FormLogin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(25, 25, 25)
-                        .addComponent(bregister, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -135,7 +127,12 @@ public class FormLogin extends javax.swing.JFrame {
                                         .addComponent(jLabel1)
                                         .addGap(0, 0, Short.MAX_VALUE))
                                     .addComponent(tusername))))
-                        .addGap(50, 50, 50))))
+                        .addGap(50, 50, 50))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(33, 33, 33)
+                        .addComponent(bregister)
+                        .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addComponent(blogin, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -160,7 +157,7 @@ public class FormLogin extends javax.swing.JFrame {
                         .addGap(26, 26, 26)
                         .addComponent(jLabel3))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                         .addComponent(tpass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -170,7 +167,7 @@ public class FormLogin extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(bregister))
-                .addGap(254, 254, 254))
+                .addGap(257, 257, 257))
         );
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
@@ -211,12 +208,6 @@ public class FormLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bregisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bregisterActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-        new FormAdmin().setVisible(true);
-    }//GEN-LAST:event_bregisterActionPerformed
-
     private void bcancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcancelActionPerformed
         // TODO add your handling code here:
         int ok = JOptionPane.showConfirmDialog(null,  "Cancel Login?","Konfirmasi Dialog",JOptionPane.YES_NO_CANCEL_OPTION);
@@ -256,6 +247,12 @@ public class FormLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tpassActionPerformed
 
+    private void bregisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bregisterMouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+        new FormAdmin().setVisible(true);
+    }//GEN-LAST:event_bregisterMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -294,7 +291,7 @@ public class FormLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private rojerusan.RSMaterialButtonRectangle bcancel;
     private rojerusan.RSMaterialButtonRectangle blogin;
-    private javax.swing.JButton bregister;
+    private javax.swing.JLabel bregister;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

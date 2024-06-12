@@ -27,19 +27,19 @@ public class FormAdmin extends javax.swing.JFrame {
         datatable();
     }
     protected void aktif() {
-        tid.setEnabled(true);
+        tusername.setEnabled(true);
         tnama.setEnabled(true);
         tusername.setEnabled(true);
-        tpassword.setEnabled(true);
-        tid.requestFocus();
+        tpass.setEnabled(true);
+        tusername.requestFocus();
     }
 
     protected void kosong() {
-        tid.setText("");
+        tusername.setText("");
         tnama.setText("");
         cbjenis.setSelectedItem(0);
         tusername.setText("");
-        tpassword.setText("");
+        tpass.setText("");
     }
     
     protected void datatable() {
@@ -93,7 +93,7 @@ public class FormAdmin extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tabeladmin = new javax.swing.JTable();
-        tpassword = new javax.swing.JPasswordField();
+        tpass = new javax.swing.JPasswordField();
         btnsave = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         btnedit = new javax.swing.JPanel();
@@ -197,11 +197,11 @@ public class FormAdmin extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(tabeladmin);
 
-        tpassword.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
-        tpassword.setForeground(new java.awt.Color(70, 70, 70));
-        tpassword.addActionListener(new java.awt.event.ActionListener() {
+        tpass.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
+        tpass.setForeground(new java.awt.Color(70, 70, 70));
+        tpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tpasswordActionPerformed(evt);
+                tpassActionPerformed(evt);
             }
         });
 
@@ -498,7 +498,7 @@ public class FormAdmin extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(tusername)
                     .addComponent(cbjenis, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tpassword)
+                    .addComponent(tpass)
                     .addComponent(tnama)
                     .addComponent(tid, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -535,7 +535,7 @@ public class FormAdmin extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(tpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tpass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnsave, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -638,13 +638,13 @@ public class FormAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
         int ok = JOptionPane.showConfirmDialog(null,  "hapus","Konfirmasi Dialog",JOptionPane.YES_NO_CANCEL_OPTION);
         if(ok == 0){
-            String sql = " delete from admin where id = '"+tid.getText()+"'";
+            String sql = " delete from admin where id = '"+tusername.getText()+"'";
             try {
                 PreparedStatement stat = conn.prepareStatement(sql);
                 stat.executeUpdate();
                 JOptionPane.showMessageDialog(null, "data berhasil dihapus");
                 kosong();
-                tid.requestFocus();
+                tusername.requestFocus();
                 datatable();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Data gagal dihapus"+ e);
@@ -680,12 +680,12 @@ public class FormAdmin extends javax.swing.JFrame {
             stat.setString(1, tnama.getText());
             stat.setString(2, cbjenis.getSelectedItem().toString());
             stat.setString(3, tusername.getText());
-            stat.setString(4, tid.getText());
+            stat.setString(4, tusername.getText());
 
             stat.executeUpdate();
             JOptionPane.showMessageDialog(null, "Data Berhasil Diubah");
             kosong();
-            tid.requestFocus();
+            tusername.requestFocus();
             datatable();
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Data Gagal Diubah"+e);
@@ -722,16 +722,16 @@ public class FormAdmin extends javax.swing.JFrame {
         String sql = "insert into admin values (?,?,?,?,?)";
         try {
             PreparedStatement stat = conn.prepareStatement(sql);
-            stat.setString(1, tid.getText());
+            stat.setString(1, tusername.getText());
             stat.setString(2, tnama.getText());
             stat.setString(3, cbjenis.getSelectedItem().toString());
             stat.setString(4, tusername.getText());
-            stat.setString(5, tpassword.getText());
+            stat.setString(5, tpass.getText());
 
             stat.executeUpdate();
             JOptionPane.showMessageDialog(null, "Data Berhasil Disimpan");
             kosong();
-            tid.requestFocus();
+            tusername.requestFocus();
             datatable();
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Data Gagal Disimpan"+ e);
@@ -742,10 +742,6 @@ public class FormAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel8MouseClicked
 
-    private void tpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tpasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tpasswordActionPerformed
-
     private void tabeladminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabeladminMouseClicked
         // TODO add your handling code here:
         int bar = tabeladmin.getSelectedRow();
@@ -754,7 +750,7 @@ public class FormAdmin extends javax.swing.JFrame {
         String c = tabmode.getValueAt(bar, 2).toString();
         String d = tabmode.getValueAt(bar, 3).toString();
 
-        tid.setText(a);
+        tusername.setText(a);
         tnama.setText(b);
         cbjenis.setSelectedItem(c);
         tusername.setText(d);
@@ -777,6 +773,10 @@ public class FormAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_btncloseMouseEntered
+
+    private void tpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tpassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tpassActionPerformed
 
     /**
      * @param args the command line arguments
@@ -819,11 +819,9 @@ public class FormAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel btnclose;
     private javax.swing.JPanel btndelete;
     private javax.swing.JPanel btnedit;
-    private javax.swing.JPanel btnedit1;
     private javax.swing.JPanel btnsave;
     private javax.swing.JComboBox<String> cbjenis;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -843,7 +841,7 @@ public class FormAdmin extends javax.swing.JFrame {
     private javax.swing.JTable tabeladmin;
     private javax.swing.JTextField tid;
     private javax.swing.JTextField tnama;
-    private javax.swing.JPasswordField tpassword;
+    private javax.swing.JPasswordField tpass;
     private javax.swing.JTextField tusername;
     // End of variables declaration//GEN-END:variables
 }
