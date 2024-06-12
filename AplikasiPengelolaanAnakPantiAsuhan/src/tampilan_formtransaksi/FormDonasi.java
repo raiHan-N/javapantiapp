@@ -141,14 +141,34 @@ public void tanggal_donatur() {
         jLabel2.setText("ID Donasi");
 
         bclear.setText("CLEAR");
+        bclear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bclearActionPerformed(evt);
+            }
+        });
 
         bedit.setText("EDIT");
+        bedit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                beditActionPerformed(evt);
+            }
+        });
 
         bdelete.setText("DELETE");
+        bdelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bdeleteActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("ID Donatur");
 
         bexit.setText("EXIT");
+        bexit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bexitActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Tanggal Donasi");
 
@@ -163,6 +183,11 @@ public void tanggal_donatur() {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tabledonasi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabledonasiMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(tabledonasi);
 
         jLabel5.setText("Jenis Donasi");
@@ -294,8 +319,8 @@ public void tanggal_donatur() {
             java.sql.Statement stat = conn.createStatement();
             ResultSet hasil = stat.executeQuery(sql);
             while(hasil.next()){
-                String id = hasil.getString("iddnt");
-                String nm = hasil.getString("namad");
+                String id = hasil.getString("id");
+                String nm = hasil.getString("nama_donatur");
                
                 tido.setText(id);
                 tndo.setText(nm);
@@ -309,8 +334,25 @@ public void tanggal_donatur() {
 
     private void bsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bsaveActionPerformed
         // TODO add your handling code here:
-                  
+        String sql = "insert into donasi values(?,?,?,?,?,?)";
+        try {
+            PreparedStatement stat = conn.prepareStatement(sql);
+             stat.setString(1,tid.getText());
+             stat.setString(2, tido.getText());
+             stat.setString(3,tndo.getText());
+             stat.setString(4, tgl);
+             stat.setString(5,jdo.getText());
+             stat.setString(6, judo.getText());
+             
+             stat.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Data Berhasil Disimpan");
+            kosong();
+            tid.requestFocus();
+            datatable();
+        } catch (Exception e) {
+             JOptionPane.showMessageDialog(null, "Data Gagal Disimpan"+e);
         
+        }
     }//GEN-LAST:event_bsaveActionPerformed
 
     private void tgldnsPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_tgldnsPropertyChange
@@ -319,6 +361,79 @@ public void tanggal_donatur() {
             tgl = format.format(tgldns.getDate());
         }
     }//GEN-LAST:event_tgldnsPropertyChange
+
+    private void beditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_beditActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "Update donasi set iddnt=?,namad=?,tanggal_donasi=?,jenis_donasi=?,jumlah_donasi where id =?";
+            PreparedStatement stat = conn.prepareStatement(sql) ;
+          
+            stat.setString(1, tido.getText());
+            stat.setString(2, tndo.getText());
+            stat.setString(3, tgl);
+            stat.setString(4, jdo.getText());
+            stat.setString(5, judo.getText());
+            stat.setString(6, tid.getText());
+            
+             JOptionPane.showMessageDialog(null, "Data Berhasil Diubah");
+            kosong();
+            tid.requestFocus();
+            datatable();
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Data Gagal Diubah"+e);
+        }
+            
+            
+    }//GEN-LAST:event_beditActionPerformed
+
+    private void bdeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bdeleteActionPerformed
+        // TODO add your handling code here:
+        int ok = JOptionPane.showConfirmDialog(null,  "hapus","Konfirmasi Dialog",JOptionPane.YES_NO_CANCEL_OPTION);
+        if(ok == 0){
+            String sql = " delete from donasi where id = '"+tid.getText()+"'";
+            try {
+                PreparedStatement stat = conn.prepareStatement(sql);
+                stat.executeUpdate();
+                JOptionPane.showMessageDialog(null, "data berhasil dihapus");
+                kosong();
+                tid.requestFocus();
+                datatable();
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Data gagal dihapus"+ e);
+            }
+        }
+    }//GEN-LAST:event_bdeleteActionPerformed
+
+    private void bclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bclearActionPerformed
+        // TODO add your handling code here:
+        kosong();
+    }//GEN-LAST:event_bclearActionPerformed
+
+    private void bexitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bexitActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_bexitActionPerformed
+
+    private void tabledonasiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabledonasiMouseClicked
+        // TODO add your handling code here:
+         int bar = tabledonasi.getSelectedRow();
+        String a = tabmode.getValueAt(bar, 0).toString();
+        String b = tabmode.getValueAt(bar, 1).toString();
+        String c = tabmode.getValueAt(bar, 2).toString();
+        String e = tabmode.getValueAt(bar, 4).toString();
+        String f = tabmode.getValueAt(bar, 5).toString();
+       
+        
+        
+        tid.setText(a);
+        tido.setText(b);
+        tndo.setText(c);
+        tanggal_donasi();
+        jdo.setText(e);
+        judo.setText(f);
+        
+
+    }//GEN-LAST:event_tabledonasiMouseClicked
 
     /**
      * @param args the command line arguments
@@ -379,4 +494,8 @@ public void tanggal_donatur() {
     private javax.swing.JTextField tido;
     private javax.swing.JTextField tndo;
     // End of variables declaration//GEN-END:variables
+
+    private void tanggal_donasi() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

@@ -207,7 +207,7 @@ protected void datatable() {
                                     .addComponent(rb1)
                                     .addGap(28, 28, 28)
                                     .addComponent(rb2))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -257,9 +257,9 @@ protected void datatable() {
             String ad="";
             if(rb1.isSelected()) ad="Perorangan";
             else ad="Instasi";
-            stat.setString(3, ad);
+            stat.setString(2, ad);
             
-            stat.setString(2, tnd.getText());
+            stat.setString(3, tnd.getText());
             
             String td="";
             if(rb3.isSelected()) td="Tetap";
