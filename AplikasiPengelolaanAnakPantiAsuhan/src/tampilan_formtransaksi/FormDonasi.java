@@ -67,12 +67,10 @@ protected void datatable() {
             String d = hasil.getString("tanggal_donasi");        
             String e = hasil.getString("jenis_donasi");        
             String f = hasil.getString("jumlah_donasi");        
-           
-            
-            String[] data = {a,b,c,d,e,f};
+             String[] data = {a,b,c,d,e,f};                 
             tabmode.addRow(data);
 
-        }
+        } 
     } catch (SQLException e) {
                     System.err.println(e);
 

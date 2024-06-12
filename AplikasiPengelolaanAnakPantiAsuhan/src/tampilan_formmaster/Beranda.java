@@ -35,13 +35,13 @@ public class Beranda extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnback = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        rSMaterialButtonRectangle1 = new rojerusan.RSMaterialButtonRectangle();
-        rSMaterialButtonRectangle2 = new rojerusan.RSMaterialButtonRectangle();
-        rSMaterialButtonRectangle3 = new rojerusan.RSMaterialButtonRectangle();
-        rSMaterialButtonRectangle4 = new rojerusan.RSMaterialButtonRectangle();
-        rSMaterialButtonRectangle5 = new rojerusan.RSMaterialButtonRectangle();
-        rSMaterialButtonRectangle6 = new rojerusan.RSMaterialButtonRectangle();
-        rSMaterialButtonRectangle7 = new rojerusan.RSMaterialButtonRectangle();
+        bortuadopsi = new rojerusan.RSMaterialButtonRectangle();
+        banak = new rojerusan.RSMaterialButtonRectangle();
+        bpengeluaran = new rojerusan.RSMaterialButtonRectangle();
+        badopsi = new rojerusan.RSMaterialButtonRectangle();
+        bdonasi = new rojerusan.RSMaterialButtonRectangle();
+        bmasukan = new rojerusan.RSMaterialButtonRectangle();
+        bdonatur1 = new rojerusan.RSMaterialButtonRectangle();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -87,84 +87,84 @@ public class Beranda extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
             .addGroup(btnbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(btnbackLayout.createSequentialGroup()
-                    .addGap(0, 13, Short.MAX_VALUE)
+                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jLabel5)
-                    .addGap(0, 13, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         btnbackLayout.setVerticalGroup(
             btnbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 46, Short.MAX_VALUE)
+            .addGap(0, 35, Short.MAX_VALUE)
             .addGroup(btnbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(btnbackLayout.createSequentialGroup()
                     .addGap(0, 11, Short.MAX_VALUE)
                     .addComponent(jLabel5)
-                    .addGap(0, 11, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanel1.add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 50, -1));
 
-        rSMaterialButtonRectangle1.setBackground(new java.awt.Color(24, 169, 153));
-        rSMaterialButtonRectangle1.setText("FORM DONATUR");
-        rSMaterialButtonRectangle1.addActionListener(new java.awt.event.ActionListener() {
+        bortuadopsi.setBackground(new java.awt.Color(24, 169, 153));
+        bortuadopsi.setText("FORM ORTU ADOPSI");
+        bortuadopsi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSMaterialButtonRectangle1ActionPerformed(evt);
+                bortuadopsiActionPerformed(evt);
             }
         });
-        jPanel1.add(rSMaterialButtonRectangle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 220, 50));
+        jPanel1.add(bortuadopsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 220, 50));
 
-        rSMaterialButtonRectangle2.setBackground(new java.awt.Color(24, 169, 153));
-        rSMaterialButtonRectangle2.setText("Form ORTU Adopsi");
-        rSMaterialButtonRectangle2.addActionListener(new java.awt.event.ActionListener() {
+        banak.setBackground(new java.awt.Color(24, 169, 153));
+        banak.setText("Form  Anak Asuh");
+        banak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSMaterialButtonRectangle2ActionPerformed(evt);
+                banakActionPerformed(evt);
             }
         });
-        jPanel1.add(rSMaterialButtonRectangle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 220, 50));
+        jPanel1.add(banak, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 220, 50));
 
-        rSMaterialButtonRectangle3.setBackground(new java.awt.Color(24, 169, 153));
-        rSMaterialButtonRectangle3.setText("Form  Anak Asuh");
-        rSMaterialButtonRectangle3.addActionListener(new java.awt.event.ActionListener() {
+        bpengeluaran.setBackground(new java.awt.Color(24, 169, 153));
+        bpengeluaran.setText("FORM PENGELUARAN");
+        bpengeluaran.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSMaterialButtonRectangle3ActionPerformed(evt);
+                bpengeluaranActionPerformed(evt);
             }
         });
-        jPanel1.add(rSMaterialButtonRectangle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 220, 50));
+        jPanel1.add(bpengeluaran, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 220, 50));
 
-        rSMaterialButtonRectangle4.setBackground(new java.awt.Color(24, 169, 153));
-        rSMaterialButtonRectangle4.setText("FORM PENGELUARAN");
-        rSMaterialButtonRectangle4.addActionListener(new java.awt.event.ActionListener() {
+        badopsi.setBackground(new java.awt.Color(24, 169, 153));
+        badopsi.setText("FORM ADOPSI");
+        badopsi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSMaterialButtonRectangle4ActionPerformed(evt);
+                badopsiActionPerformed(evt);
             }
         });
-        jPanel1.add(rSMaterialButtonRectangle4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 220, 50));
+        jPanel1.add(badopsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 220, 50));
 
-        rSMaterialButtonRectangle5.setBackground(new java.awt.Color(24, 169, 153));
-        rSMaterialButtonRectangle5.setText("FORM ADOPSI");
-        rSMaterialButtonRectangle5.addActionListener(new java.awt.event.ActionListener() {
+        bdonasi.setBackground(new java.awt.Color(24, 169, 153));
+        bdonasi.setText("FORM DONASI");
+        bdonasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSMaterialButtonRectangle5ActionPerformed(evt);
+                bdonasiActionPerformed(evt);
             }
         });
-        jPanel1.add(rSMaterialButtonRectangle5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 220, 50));
+        jPanel1.add(bdonasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 220, 50));
 
-        rSMaterialButtonRectangle6.setBackground(new java.awt.Color(24, 169, 153));
-        rSMaterialButtonRectangle6.setText("FORM DONASI");
-        rSMaterialButtonRectangle6.addActionListener(new java.awt.event.ActionListener() {
+        bmasukan.setBackground(new java.awt.Color(24, 169, 153));
+        bmasukan.setText("FORM PEMASUKAN");
+        bmasukan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSMaterialButtonRectangle6ActionPerformed(evt);
+                bmasukanActionPerformed(evt);
             }
         });
-        jPanel1.add(rSMaterialButtonRectangle6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 220, 50));
+        jPanel1.add(bmasukan, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 220, 50));
 
-        rSMaterialButtonRectangle7.setBackground(new java.awt.Color(24, 169, 153));
-        rSMaterialButtonRectangle7.setText("FORM PEMASUKAN");
-        rSMaterialButtonRectangle7.addActionListener(new java.awt.event.ActionListener() {
+        bdonatur1.setBackground(new java.awt.Color(24, 169, 153));
+        bdonatur1.setText("FORM DONATUR");
+        bdonatur1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSMaterialButtonRectangle7ActionPerformed(evt);
+                bdonatur1ActionPerformed(evt);
             }
         });
-        jPanel1.add(rSMaterialButtonRectangle7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 220, 50));
+        jPanel1.add(bdonatur1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 220, 50));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 480));
 
@@ -193,43 +193,45 @@ public class Beranda extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnbackMouseReleased
 
-    private void rSMaterialButtonRectangle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle1ActionPerformed
+    private void bortuadopsiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bortuadopsiActionPerformed
         // TODO add your handling code here:
           this.hide();        
-        new FormDonatur().setVisible(true);
-    }//GEN-LAST:event_rSMaterialButtonRectangle1ActionPerformed
+        new FormOrtuAdopsi().setVisible(true);
+    }//GEN-LAST:event_bortuadopsiActionPerformed
 
-    private void rSMaterialButtonRectangle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle2ActionPerformed
+    private void banakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_banakActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rSMaterialButtonRectangle2ActionPerformed
+          this.hide();
+        new FormAnakAsuh().setVisible(true);
+    }//GEN-LAST:event_banakActionPerformed
 
-    private void rSMaterialButtonRectangle3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rSMaterialButtonRectangle3ActionPerformed
-
-    private void rSMaterialButtonRectangle4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle4ActionPerformed
+    private void bpengeluaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bpengeluaranActionPerformed
         // TODO add your handling code here:
         this.hide();        
         new FormPengeluaran().setVisible(true);
-    }//GEN-LAST:event_rSMaterialButtonRectangle4ActionPerformed
+    }//GEN-LAST:event_bpengeluaranActionPerformed
 
-    private void rSMaterialButtonRectangle5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle5ActionPerformed
+    private void badopsiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_badopsiActionPerformed
         // TODO add your handling code here:
         this.hide();        
         new FormAdopsi().setVisible(true);
-    }//GEN-LAST:event_rSMaterialButtonRectangle5ActionPerformed
+    }//GEN-LAST:event_badopsiActionPerformed
 
-    private void rSMaterialButtonRectangle6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle6ActionPerformed
+    private void bdonasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bdonasiActionPerformed
         // TODO add your handling code here:
         this.hide();        
         new FormDonasi().setVisible(true);
-    }//GEN-LAST:event_rSMaterialButtonRectangle6ActionPerformed
+    }//GEN-LAST:event_bdonasiActionPerformed
 
-    private void rSMaterialButtonRectangle7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle7ActionPerformed
+    private void bmasukanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bmasukanActionPerformed
         // TODO add your handling code here:
         this.hide();        
         new FormPemasukan().setVisible(true);
-    }//GEN-LAST:event_rSMaterialButtonRectangle7ActionPerformed
+    }//GEN-LAST:event_bmasukanActionPerformed
+
+    private void bdonatur1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bdonatur1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bdonatur1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -267,16 +269,16 @@ public class Beranda extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private rojerusan.RSMaterialButtonRectangle badopsi;
+    private rojerusan.RSMaterialButtonRectangle banak;
+    private rojerusan.RSMaterialButtonRectangle bdonasi;
+    private rojerusan.RSMaterialButtonRectangle bdonatur1;
+    private rojerusan.RSMaterialButtonRectangle bmasukan;
+    private rojerusan.RSMaterialButtonRectangle bortuadopsi;
+    private rojerusan.RSMaterialButtonRectangle bpengeluaran;
     private javax.swing.JPanel btnback;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle1;
-    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle2;
-    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle3;
-    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle4;
-    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle5;
-    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle6;
-    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle7;
     // End of variables declaration//GEN-END:variables
 }
