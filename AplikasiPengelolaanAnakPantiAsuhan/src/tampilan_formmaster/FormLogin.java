@@ -3,7 +3,6 @@ package tampilan_formmaster;
 import java.sql.ResultSet;
 import java.sql.*;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 import koneksi.koneksi;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -15,12 +14,17 @@ import koneksi.koneksi;
  * @author Raihan
  */
 public class FormLogin extends javax.swing.JFrame {
+    
+
     private Connection conn = new koneksi().connect();
     /**
      * Creates new form FormLogin
      */
     public FormLogin() {
         initComponents();
+
+//        iconhide.setIcon(iconEyeOff);
+//        jLabel9.setIcon(User);
     }
 
     /**
@@ -44,9 +48,7 @@ public class FormLogin extends javax.swing.JFrame {
         blogin = new rojerusan.RSMaterialButtonRectangle();
         tpass = new rojerusan.RSPasswordTextPlaceHolder();
         bregister = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        iconshow = new javax.swing.JLabel();
-        iconhide = new javax.swing.JLabel();
+        showpass = new javax.swing.JCheckBox();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
 
@@ -57,28 +59,22 @@ public class FormLogin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jLabel2.setText("Username");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 279, -1, -1));
 
         tusername.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         tusername.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(16, 150, 72)));
-        jPanel1.add(tusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 267, 209, 31));
 
         jLabel4.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 51, 51));
         jLabel4.setText("Belum ada akun ? silahkan ");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 442, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jLabel3.setText("Password");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 324, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Poppins SemiBold", 1, 36)); // NOI18N
         jLabel1.setText("Login");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 194, -1, -1));
 
         bcancel.setBackground(new java.awt.Color(16, 150, 72));
         bcancel.setText("cancel");
@@ -88,7 +84,6 @@ public class FormLogin extends javax.swing.JFrame {
                 bcancelActionPerformed(evt);
             }
         });
-        jPanel1.add(bcancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 383, 126, 41));
 
         blogin.setBackground(new java.awt.Color(16, 150, 72));
         blogin.setText("Login");
@@ -98,7 +93,6 @@ public class FormLogin extends javax.swing.JFrame {
                 bloginActionPerformed(evt);
             }
         });
-        jPanel1.add(blogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 383, 126, 41));
 
         tpass.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(16, 150, 72)));
         tpass.setForeground(new java.awt.Color(16, 150, 72));
@@ -107,7 +101,6 @@ public class FormLogin extends javax.swing.JFrame {
                 tpassActionPerformed(evt);
             }
         });
-        jPanel1.add(tpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 317, 209, -1));
 
         bregister.setFont(new java.awt.Font("Poppins SemiBold", 0, 14)); // NOI18N
         bregister.setText("Register");
@@ -117,21 +110,76 @@ public class FormLogin extends javax.swing.JFrame {
                 bregisterMouseClicked(evt);
             }
         });
-        jPanel1.add(bregister, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 442, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/user.png"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, -1, 30));
-
-        iconshow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/eye.png"))); // NOI18N
-        iconshow.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                iconshowMouseClicked(evt);
+        showpass.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        showpass.setText("Show Password");
+        showpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showpassActionPerformed(evt);
             }
         });
-        jPanel1.add(iconshow, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, -1, 30));
 
-        iconhide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/eye-off.png"))); // NOI18N
-        jPanel1.add(iconhide, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, -1, 30));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(145, 145, 145)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel2)
+                        .addGap(34, 34, 34)
+                        .addComponent(tusername, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(blogin, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(64, 64, 64)
+                        .addComponent(bcancel, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel4)
+                        .addGap(33, 33, 33)
+                        .addComponent(bregister))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel3)
+                        .addGap(37, 37, 37)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(showpass)
+                            .addComponent(tpass, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(56, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(194, 194, 194)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel2))
+                    .addComponent(tusername, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(jLabel3))
+                    .addComponent(tpass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addComponent(showpass)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(blogin, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bcancel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(bregister)))
+        );
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/illust/login.jpg"))); // NOI18N
@@ -216,12 +264,14 @@ public class FormLogin extends javax.swing.JFrame {
         new FormAdmin().setVisible(true);
     }//GEN-LAST:event_bregisterMouseClicked
 
-    private void iconshowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconshowMouseClicked
+    private void showpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showpassActionPerformed
         // TODO add your handling code here:
-        iconshow.setVisible(false);
-        iconhide.setVisible(true);
+        if(showpass.isSelected()){
         tpass.setEchoChar((char)0);
-    }//GEN-LAST:event_iconshowMouseClicked
+        } else {
+         tpass.setEchoChar('*');
+        }
+    }//GEN-LAST:event_showpassActionPerformed
 
     /**
      * @param args the command line arguments
@@ -262,8 +312,6 @@ public class FormLogin extends javax.swing.JFrame {
     private rojerusan.RSMaterialButtonRectangle bcancel;
     private rojerusan.RSMaterialButtonRectangle blogin;
     private javax.swing.JLabel bregister;
-    private javax.swing.JLabel iconhide;
-    private javax.swing.JLabel iconshow;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -271,9 +319,9 @@ public class FormLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JCheckBox showpass;
     private rojerusan.RSPasswordTextPlaceHolder tpass;
     private javax.swing.JTextField tusername;
     // End of variables declaration//GEN-END:variables
