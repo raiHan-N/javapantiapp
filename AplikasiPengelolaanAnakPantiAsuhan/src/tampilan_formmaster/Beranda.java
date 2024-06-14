@@ -85,7 +85,7 @@ public class Beranda extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(0, 0, 0)
                         .addComponent(jLabel3)))
                 .addContainerGap(37, Short.MAX_VALUE))
         );
@@ -126,7 +126,7 @@ public class Beranda extends javax.swing.JFrame {
         jPanel2.add(banak, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 50, 350, 75));
 
         bpengeluaran.setBackground(new java.awt.Color(16, 150, 72));
-        bpengeluaran.setText("FORM PENGELUARAN");
+        bpengeluaran.setText("pengeluaran");
         bpengeluaran.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         bpengeluaran.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +136,7 @@ public class Beranda extends javax.swing.JFrame {
         jPanel2.add(bpengeluaran, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 350, 75));
 
         bmasukan.setBackground(new java.awt.Color(16, 150, 72));
-        bmasukan.setText("FORM PEMASUKAN");
+        bmasukan.setText("Pemasukan");
         bmasukan.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         bmasukan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,7 +146,7 @@ public class Beranda extends javax.swing.JFrame {
         jPanel2.add(bmasukan, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, 350, 75));
 
         bdonasi.setBackground(new java.awt.Color(16, 150, 72));
-        bdonasi.setText("FORM DONASI");
+        bdonasi.setText("donasi");
         bdonasi.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         bdonasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,7 +166,7 @@ public class Beranda extends javax.swing.JFrame {
         jPanel2.add(badopsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 350, 75));
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel2.setText("FORM TRANSAKSI");
+        jLabel2.setText("Transaksi");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, -1));
         jLabel2.getAccessibleContext().setAccessibleName("");
 
