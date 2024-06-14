@@ -157,6 +157,7 @@ protected void datatable() {
         bsave.setBackground(new java.awt.Color(16, 150, 72));
         bsave.setForeground(new java.awt.Color(255, 255, 255));
         bsave.setText("SAVE");
+        bsave.setPreferredSize(new java.awt.Dimension(75, 25));
         bsave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bsaveActionPerformed(evt);
@@ -166,6 +167,7 @@ protected void datatable() {
         bedit.setBackground(new java.awt.Color(16, 150, 72));
         bedit.setForeground(new java.awt.Color(255, 255, 255));
         bedit.setText("EDIT");
+        bedit.setPreferredSize(new java.awt.Dimension(75, 25));
         bedit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 beditActionPerformed(evt);
@@ -175,6 +177,7 @@ protected void datatable() {
         bdelete.setBackground(new java.awt.Color(16, 150, 72));
         bdelete.setForeground(new java.awt.Color(255, 255, 255));
         bdelete.setText("DELETE");
+        bdelete.setPreferredSize(new java.awt.Dimension(75, 25));
         bdelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bdeleteActionPerformed(evt);
@@ -184,6 +187,7 @@ protected void datatable() {
         bclear.setBackground(new java.awt.Color(16, 150, 72));
         bclear.setForeground(new java.awt.Color(255, 255, 255));
         bclear.setText("CLEAR");
+        bclear.setPreferredSize(new java.awt.Dimension(75, 25));
         bclear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bclearActionPerformed(evt);
@@ -193,6 +197,7 @@ protected void datatable() {
         bexit.setBackground(new java.awt.Color(16, 150, 72));
         bexit.setForeground(new java.awt.Color(255, 255, 255));
         bexit.setText("EXIT");
+        bexit.setPreferredSize(new java.awt.Dimension(75, 25));
         bexit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bexitActionPerformed(evt);
@@ -227,25 +232,25 @@ protected void datatable() {
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(bsave)
+                                    .addComponent(bsave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(bedit))
+                                    .addComponent(bedit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel5)
                                     .addGap(32, 32, 32)
                                     .addComponent(rb3)))
-                            .addGap(26, 26, 26)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(bdelete)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bclear)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(bexit))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(11, 11, 11)
+                                    .addGap(37, 37, 37)
                                     .addComponent(rb4)
-                                    .addGap(0, 0, Short.MAX_VALUE)))))
+                                    .addGap(0, 0, Short.MAX_VALUE))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(18, 18, 18)
+                                    .addComponent(bdelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(bclear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bexit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
@@ -265,7 +270,7 @@ protected void datatable() {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
+                .addContainerGap(42, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(tid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -285,11 +290,11 @@ protected void datatable() {
                     .addComponent(rb4))
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bedit)
-                    .addComponent(bdelete)
-                    .addComponent(bclear)
-                    .addComponent(bexit)
-                    .addComponent(bsave))
+                    .addComponent(bedit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bdelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bclear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bexit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bsave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69))
