@@ -27,6 +27,7 @@ public class FormAdmin extends javax.swing.JFrame {
         datatable();
     }
     protected void aktif() {
+        tid.setEnabled(true);
         tusername.setEnabled(true);
         tnama.setEnabled(true);
         tusername.setEnabled(true);
@@ -35,6 +36,7 @@ public class FormAdmin extends javax.swing.JFrame {
     }
 
     protected void kosong() {
+        tid.setText("");
         tusername.setText("");
         tnama.setText("");
         cbjenis.setSelectedItem(0);
@@ -651,13 +653,13 @@ public class FormAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
         int ok = JOptionPane.showConfirmDialog(null,  "hapus","Konfirmasi Dialog",JOptionPane.YES_NO_CANCEL_OPTION);
         if(ok == 0){
-            String sql = " delete from admin where id = '"+tusername.getText()+"'";
+            String sql = " delete from admin where id = '"+tid.getText()+"'";
             try {
                 PreparedStatement stat = conn.prepareStatement(sql);
                 stat.executeUpdate();
                 JOptionPane.showMessageDialog(null, "data berhasil dihapus");
                 kosong();
-                tusername.requestFocus();
+                tid.requestFocus();
                 datatable();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Data gagal dihapus"+ e);
@@ -693,7 +695,7 @@ public class FormAdmin extends javax.swing.JFrame {
             stat.setString(1, tnama.getText());
             stat.setString(2, cbjenis.getSelectedItem().toString());
             stat.setString(3, tusername.getText());
-            stat.setString(4, tusername.getText());
+            stat.setString(4, tid.getText());
 
             stat.executeUpdate();
             JOptionPane.showMessageDialog(null, "Data Berhasil Diubah");
@@ -735,16 +737,16 @@ public class FormAdmin extends javax.swing.JFrame {
         String sql = "insert into admin values (?,?,?,?,?)";
         try {
             PreparedStatement stat = conn.prepareStatement(sql);
-            stat.setString(1, tusername.getText());
+            stat.setString(1, tid.getText());
             stat.setString(2, tnama.getText());
             stat.setString(3, cbjenis.getSelectedItem().toString());
             stat.setString(4, tusername.getText());
             stat.setString(5, tpass.getText());
-
+      
             stat.executeUpdate();
             JOptionPane.showMessageDialog(null, "Data Berhasil Disimpan");
             kosong();
-            tusername.requestFocus();
+            tid.requestFocus();
             datatable();
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Data Gagal Disimpan"+ e);
@@ -763,7 +765,7 @@ public class FormAdmin extends javax.swing.JFrame {
         String c = tabmode.getValueAt(bar, 2).toString();
         String d = tabmode.getValueAt(bar, 3).toString();
 
-        tusername.setText(a);
+        tid.setText(a);
         tnama.setText(b);
         cbjenis.setSelectedItem(c);
         tusername.setText(d);
