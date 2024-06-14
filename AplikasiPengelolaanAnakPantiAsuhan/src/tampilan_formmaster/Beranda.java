@@ -33,28 +33,144 @@ public class Beranda extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        btnback = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         bortuadopsi = new rojerusan.RSMaterialButtonRectangle();
+        bdonatur1 = new rojerusan.RSMaterialButtonRectangle();
         banak = new rojerusan.RSMaterialButtonRectangle();
         bpengeluaran = new rojerusan.RSMaterialButtonRectangle();
-        badopsi = new rojerusan.RSMaterialButtonRectangle();
-        bdonasi = new rojerusan.RSMaterialButtonRectangle();
         bmasukan = new rojerusan.RSMaterialButtonRectangle();
-        bdonatur1 = new rojerusan.RSMaterialButtonRectangle();
+        bdonasi = new rojerusan.RSMaterialButtonRectangle();
+        badopsi = new rojerusan.RSMaterialButtonRectangle();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        btnback = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(16, 150, 72));
 
         jLabel1.setBackground(new java.awt.Color(247, 240, 240));
-        jLabel1.setFont(new java.awt.Font("Poppins ExtraBold", 1, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Poppins ExtraBold", 1, 60)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(247, 240, 240));
         jLabel1.setText("Panti App");
 
-        btnback.setBackground(new java.awt.Color(24, 169, 153));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/diversity_1_24dp_FILL0_wght400_GRAD0_opsz24.png"))); // NOI18N
+
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Aplikasi Pengelola Panti Asuhan");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel4)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3)))
+                .addContainerGap(37, Short.MAX_VALUE))
+        );
+
+        jLabel3.getAccessibleContext().setAccessibleName("");
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        bortuadopsi.setBackground(new java.awt.Color(16, 150, 72));
+        bortuadopsi.setText("Orang Tua Adopsi");
+        bortuadopsi.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        bortuadopsi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bortuadopsiActionPerformed(evt);
+            }
+        });
+        jPanel2.add(bortuadopsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 350, 75));
+
+        bdonatur1.setBackground(new java.awt.Color(16, 150, 72));
+        bdonatur1.setText("Donatur");
+        bdonatur1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        bdonatur1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bdonatur1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(bdonatur1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 350, 75));
+
+        banak.setBackground(new java.awt.Color(16, 150, 72));
+        banak.setText("Anak Asuh");
+        banak.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        banak.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                banakActionPerformed(evt);
+            }
+        });
+        jPanel2.add(banak, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 50, 350, 75));
+
+        bpengeluaran.setBackground(new java.awt.Color(16, 150, 72));
+        bpengeluaran.setText("FORM PENGELUARAN");
+        bpengeluaran.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        bpengeluaran.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bpengeluaranActionPerformed(evt);
+            }
+        });
+        jPanel2.add(bpengeluaran, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 350, 75));
+
+        bmasukan.setBackground(new java.awt.Color(16, 150, 72));
+        bmasukan.setText("FORM PEMASUKAN");
+        bmasukan.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        bmasukan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bmasukanActionPerformed(evt);
+            }
+        });
+        jPanel2.add(bmasukan, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, 350, 75));
+
+        bdonasi.setBackground(new java.awt.Color(16, 150, 72));
+        bdonasi.setText("FORM DONASI");
+        bdonasi.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        bdonasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bdonasiActionPerformed(evt);
+            }
+        });
+        jPanel2.add(bdonasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 350, 75));
+
+        badopsi.setBackground(new java.awt.Color(16, 150, 72));
+        badopsi.setText("adopsi");
+        badopsi.setFont(new java.awt.Font("Arial Black", 0, 36)); // NOI18N
+        badopsi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                badopsiActionPerformed(evt);
+            }
+        });
+        jPanel2.add(badopsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 350, 75));
+
+        jLabel2.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jLabel2.setText("FORM TRANSAKSI");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, -1));
+        jLabel2.getAccessibleContext().setAccessibleName("");
+
+        btnback.setBackground(new java.awt.Color(102, 102, 102));
         btnback.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnback.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -92,146 +208,31 @@ public class Beranda extends javax.swing.JFrame {
             .addGroup(btnbackLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        bortuadopsi.setBackground(new java.awt.Color(24, 169, 153));
-        bortuadopsi.setText("FORM ORTU ADOPSI");
-        bortuadopsi.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
-        bortuadopsi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bortuadopsiActionPerformed(evt);
-            }
-        });
+        jPanel2.add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 340, -1, 40));
 
-        banak.setBackground(new java.awt.Color(24, 169, 153));
-        banak.setText("Form  Anak Asuh");
-        banak.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
-        banak.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                banakActionPerformed(evt);
-            }
-        });
-
-        bpengeluaran.setBackground(new java.awt.Color(24, 169, 153));
-        bpengeluaran.setText("FORM PENGELUARAN");
-        bpengeluaran.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
-        bpengeluaran.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bpengeluaranActionPerformed(evt);
-            }
-        });
-
-        badopsi.setBackground(new java.awt.Color(24, 169, 153));
-        badopsi.setText("FORM ADOPSI");
-        badopsi.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
-        badopsi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                badopsiActionPerformed(evt);
-            }
-        });
-
-        bdonasi.setBackground(new java.awt.Color(24, 169, 153));
-        bdonasi.setText("FORM DONASI");
-        bdonasi.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
-        bdonasi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bdonasiActionPerformed(evt);
-            }
-        });
-
-        bmasukan.setBackground(new java.awt.Color(24, 169, 153));
-        bmasukan.setText("FORM PEMASUKAN");
-        bmasukan.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
-        bmasukan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bmasukanActionPerformed(evt);
-            }
-        });
-
-        bdonatur1.setBackground(new java.awt.Color(24, 169, 153));
-        bdonatur1.setText("FORM DONATUR");
-        bdonatur1.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
-        bdonatur1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bdonatur1ActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setFont(new java.awt.Font("Poppins SemiBold", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(247, 240, 240));
-        jLabel2.setText("FORM TRANSAKSI");
-
-        jLabel3.setFont(new java.awt.Font("Poppins SemiBold", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(247, 240, 240));
-        jLabel3.setText("FORM INPUT");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(bortuadopsi, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
-                            .addComponent(banak, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bdonatur1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(40, 40, 40)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(jLabel2)
-                            .addComponent(badopsi, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bdonasi, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bmasukan, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bpengeluaran, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(160, 160, 160)
-                        .addComponent(jLabel1)))
-                .addContainerGap(150, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bortuadopsi, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(badopsi, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(banak, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bdonasi, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bdonatur1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bmasukan, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addComponent(bpengeluaran, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        jLabel2.getAccessibleContext().setAccessibleName("");
-        jLabel3.getAccessibleContext().setAccessibleName("");
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel6.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel6.setText("Input Data");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 793, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -346,7 +347,10 @@ public class Beranda extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
